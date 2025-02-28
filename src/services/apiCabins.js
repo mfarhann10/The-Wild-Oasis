@@ -1,7 +1,10 @@
 import supabase, { supabaseUrl } from './supabase';
 
 export async function getCabins() {
-  const { data, error } = await supabase.from('cabins').select('*');
+  const { data, error } = await supabase
+    .from('cabins')
+    .select('*')
+    .order('created_at', { ascending: true }); // Tambahkan order di sini;
 
   if (error) {
     console.log(error);
