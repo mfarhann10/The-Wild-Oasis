@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
-import { createEditCabin } from '../services/apiCabins';
+import { createEditCabin } from '../../services/apiCabins';
 
 export function useCreateCabin() {
   /* using query client to display updating state in UI */
