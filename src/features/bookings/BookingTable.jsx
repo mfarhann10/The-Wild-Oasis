@@ -5,6 +5,7 @@ import Empty from '../../ui/Empty';
 import Spinner from '../../ui/Spinner';
 import { useGetBookings } from '../../hooks/bookings/useGetBookings';
 
+
 function BookingTable() {
   const { isLoading, bookings } = useGetBookings();
 
@@ -24,6 +25,7 @@ function BookingTable() {
         </Table.Header>
 
         <Table.Body
+          //data={filteredBookings}
           data={bookings}
           render={(booking) => (
             <BookingRow key={booking.id} booking={booking} />
